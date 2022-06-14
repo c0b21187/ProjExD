@@ -19,7 +19,7 @@ def syutudai():
 def kaitou(seikai):
     ans = input("答え:")
     if(ans in seikai):
-        print("正解")
+        print("正解！")
     else:
         print("不正解")
 
