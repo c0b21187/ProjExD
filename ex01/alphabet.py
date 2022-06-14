@@ -1,23 +1,23 @@
 import random
 import datetime
 
-NUM_OF_TRIALS = 5
-NUM_OF_ALL_CHARS = 10
-NUM_OF_ABS_CHARS = 2
+NUM_OF_TRIALS = 5   #最大繰り返し回数
+NUM_OF_ALL_CHARS = 10   #対象文字数
+NUM_OF_ABS_CHARS = 2   #欠損文字数
 
 def main():
-    st = datetime.datetime.now()
+    st = datetime.datetime.now()   #時間計測開始
     for _ in range(NUM_OF_TRIALS):
         seikai = shutsudai()
         f = kaitou(seikai)
-        if (f == 1):
+        if f == 1:   #完全正解なのでbreakする
             break
-    ed = datetime.datetime.now()
+    ed = datetime.datetime.now()   #j時間計測終了
     print(f"所要時間：{(ed-st).seconds}秒かかりました")
 
 
 def shutudai():
-    alphabets = [chr(c+65) for c in range(26)]
+    alphabets = [chr(c+65) for c in range(26)]   #全アルファベットからNUM_OF_ALL_CHARS個の文字をランダムに選ぶ：対象文字
     all_char_lst = random.sample(alphabets, NUM_OF_ALL_CHARS)
     print(f"対象文字：{all_char_lst}")
     
