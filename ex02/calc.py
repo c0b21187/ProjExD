@@ -4,25 +4,24 @@ import tkinter.messagebox as tkm
 def button_click(event):
     btn = event.widget
     num = btn["text"] #クリックされたボタンの文字
-    #tkm.showinfo("", f"{num}のボタンがクリックされました")
-    #entry.insert(tk.END, num)
-    if num == "=":
+
+    if num == "=": #計算結果を表示する=ボタン
         eqn = entry.get()
         res = eval(eqn)
         entry.delete(0,tk.END)
         entry.insert(tk.END,res)
     
-    elif num == "AC": 
-        entry.delete(0,tk.END) #オールクリアされます
+    elif num == "AC": #すべてdeleteするACボタン
+        entry.delete(0,tk.END)
     
-    elif num == "+/-":
+    elif num == "+/-": #正と負を入れ替える+/-ボタン
         eqn = entry.get()
         res = eval(eqn)
         res = res * -1
         entry.delete(0,tk.END)
         entry.insert(tk.END,res)
     
-    elif num == "%":
+    elif num == "%": #割合表示させる%ボタン
         eqn = entry.get()
         res = eval(eqn)
         res = res * 0.01
@@ -36,7 +35,6 @@ def button_click(event):
 if __name__ == "__main__":
     root = tk.Tk()
     root.title("tk")
-    #root.geometry("300x500")
 
     btn = tk.Button(root, text="9",
                     width=4,
@@ -49,7 +47,7 @@ if __name__ == "__main__":
 
     r,c = 1, 0 #r 行番号 c 列番号
     
-    for i, num in enumerate(["AC", "+/-", "%", "//",7, 8, 9,"*", 4, 5, 6, "-", 1, 2, 3, "+",0, "00", ".", "="]):
+    for i, num in enumerate(["AC", "+/-", "%", "//",7, 8, 9,"*", 4, 5, 6, "-", 1, 2, 3, "+",0, "00", ".", "="]): #00を入力するボタンも追加
         btn = tk.Button(root,
                         text=f"{num}",
                         width=4,
