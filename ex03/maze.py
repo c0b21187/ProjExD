@@ -43,16 +43,16 @@ if __name__ == "__main__": #メイン
     maze_bg = mm.make_maze(13,7) #1:壁/0:床を表す二次元リスト
     mm.show_maze(canvas, maze_bg) # canvasにmaze_bgを描く
 
-    tori = tk.PhotoImage(file = "fig/9.png") #こうかとんの画像を挿入
-    box = tk.PhotoImage(file = "fig/kaizoku_takara1.png")
-    start = tk.PhotoImage(file = "fig/0218000009_1.png")
+    tori = tk.PhotoImage(file = "fig/9.png") #こうかとんの画像を読み込み
+    box = tk.PhotoImage(file = "fig/kaizoku_takara1.png") #宝箱の画像を読み込み
+    start = tk.PhotoImage(file = "fig/0218000009_1.png") #スタートの画像を読み込み
     mx, my =1, 1
     cx, cy = mx * 100 + 50, my * 100 + 50
     sx, sy = 150,150
     bx, by = 1150, 550
     canvas.create_image(cx, cy, image = tori, tag = "tori") #こうかとんの画像を表示させる
-    canvas.create_image(sx, sy, image = start, tag = "start")
-    canvas.create_image(bx, by, image = box, tag = "box")
+    canvas.create_image(sx, sy, image = start, tag = "start") #宝箱の画像を表示させる
+    canvas.create_image(bx, by, image = box, tag = "box") #スタートの画像を表示させる
 
     key = ""
 
