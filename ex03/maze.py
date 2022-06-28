@@ -50,7 +50,7 @@ if __name__ == "__main__":
     cx, cy = mx * 100 + 50, my * 100 + 50
     sx, sy = 150,150
     bx, by = 1150, 550
-    canvas.create_image(cx, cy, image = tori, tag = "tori")
+    canvas.create_image(cx, cy, image = tori, tag = "tori") #こうかとんの画像を表示させる
     canvas.create_image(sx, sy, image = start, tag = "start")
     canvas.create_image(bx, by, image = box, tag = "box")
 
