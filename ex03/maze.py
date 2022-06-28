@@ -14,11 +14,11 @@ def key_up(event):
 def main_proc():
     global cx, cy
     delta = { #キー：押されているキーkey/値：移動幅リスト[x, y]
-        ""     : [0, 0],
+        ""     : [0,   0],
         "Up"   : [0, -20],
-        "Down" : [0,+20],
+        "Down" : [0, +20],
         "Left" : [-20, 0],
-        "Right": [+20,+ 0],
+        "Right": [+20, 0],
     }
     cx, cy = cx + delta[key][0], cy + delta[key][1]
     canvas.coords("tori", cx, cy)
