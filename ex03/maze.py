@@ -33,7 +33,7 @@ def main_proc():
     root.after(100, main_proc)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": #メイン
     root = tk.Tk()
     root.title("迷えるこうかとん")
 
