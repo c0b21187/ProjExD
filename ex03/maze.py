@@ -43,7 +43,7 @@ if __name__ == "__main__":
     maze_bg = mm.make_maze(13,7) #1:壁/0:床を表す二次元リスト
     mm.show_maze(canvas, maze_bg) # canvasにmaze_bgを描く
 
-    tori = tk.PhotoImage(file = "fig/9.png")
+    tori = tk.PhotoImage(file = "fig/9.png") #こうかとんの画像を挿入
     box = tk.PhotoImage(file = "fig/kaizoku_takara1.png")
     start = tk.PhotoImage(file = "fig/0218000009_1.png")
     mx, my =1, 1
