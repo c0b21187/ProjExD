@@ -1,12 +1,12 @@
-import pygame as pg
-import sys
-import random
+import pygame as pg # pygameをimport
+import sys          # systemをimport
+import random       # randomをimport
 
 def main():
     clock = pg.time.Clock()
 
     # 練習1
-    pg.display.set_caption("逃げろ！こうかとん")
+    pg.display.set_caption("逃げろ！こうかとん")   # 逃げろこうかとんを題名に表示させる
     screen_sfc = pg.display.set_mode((1300, 700)) # Surface
     screen_rct = screen_sfc.get_rect()            # Rect
     bgimg_sfc = pg.image.load("fig/halloweenyoru491.png") # 背景画像を入れる
