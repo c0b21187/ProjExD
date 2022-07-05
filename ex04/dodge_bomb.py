@@ -7,7 +7,7 @@ def main():
 
     # 練習1
     pg.display.set_caption("逃げろ！こうかとん")
-    screen_sfc = pg.display.set_mode((1000, 600)) # Surface
+    screen_sfc = pg.display.set_mode((1300, 700)) # Surface
     screen_rct = screen_sfc.get_rect()
     bgimg_sfc = pg.image.load("fig/pg_bg.jpg")
     bgimg_rct = bgimg_sfc.get_rect()
@@ -17,9 +17,9 @@ def main():
     kkimg_sfc = pg.image.load("fig/6.png")
     kkimg_sfc = pg.transform.rotozoom(kkimg_sfc, 0, 2.0)
     kkimg_rct = kkimg_sfc.get_rect()
-    kkimg_rct.center = 600, 300
+    kkimg_rct.center = 900, 500
 
-    #練習5
+    # 練習5
     bmimg_sfc = pg.Surface((20, 20))
     bmimg_sfc.set_colorkey((0, 0, 0))
     pg.draw.circle(bmimg_sfc, (255, 0, 0), (10, 10), 10)
@@ -53,13 +53,16 @@ def main():
         #練習6
         bmimg_rct.move_ip(vx, vy)
 
-        #練習5
+        # 練習5
         screen_sfc.blit(bmimg_sfc, bmimg_rct)
 
-        #練習7
+        # 練習7
         yoko, tate = check_bound(bmimg_rct, screen_rct)
         vx *= yoko
         vy *= tate
+
+        # 練習8
+        if kkimg_rct.colliderect(bmimg_rct): return
         
         pg.display.update()
         clock.tick(1000)
