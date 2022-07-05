@@ -37,9 +37,9 @@ def main():
     bmimg_rct3.centerx = random.randint(0, screen_rct.width)
     bmimg_rct3.centery = random.randint(0, screen_rct.height)
 
-    vx1, vy1 = +1 ,+1
-    vx2, vy2 = +1 ,+1
-    vx3, vy3 = +1 ,+1
+    vx1, vy1 = +1 ,+1 # 1体目の変数
+    vx2, vy2 = +1 ,+1 # 2体目の変数
+    vx3, vy3 = +1 ,+1 # 3体目の変数
     
 
     while True:
