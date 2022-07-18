@@ -3,6 +3,7 @@ import sys
 import random
 
 
+
 class Screen:
     def __init__(self, title, wh, image):
         pg.display.set_caption(title)
@@ -74,7 +75,7 @@ class Bomb:
 
 def main():
     clock = pg.time.Clock()
-    scr = Screen("逃げろ！こうかとん", (1600, 900), "fig/pg_bg.jpg")
+    scr = Screen("逃げろ！こうかとん", (1400, 700), "fig/pg_bg.jpg")
     kkt = Bird("fig/6.png", 2.0, (900, 400))
     bkd = Bomb((255,0,0), 10, (+1,+1), scr)
 
