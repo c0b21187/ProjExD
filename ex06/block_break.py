@@ -1,8 +1,9 @@
 import tkinter
 import math
+import random
 
 NUM_H_BLOCK = 10  # ブロッックの数（横方向)
-NUM_V_BLOCK = 10  # ブロックの数（縦方向）
+NUM_V_BLOCK = 10   # ブロックの数（縦方向）
 WIDTH_BLOCK = 40  # ブロックの幅
 HEIGHT_BLOCK = 20  # ブロックの高さ
 COLOR_BLOCK = "blue"  # ブロックの色
@@ -11,12 +12,12 @@ HEIGHT_SPACE = 300  # 縦方向の空きスペース
 
 WIDTH_PADDLE = 200  # パドルの幅
 HEIGHT_PADDLE = 20  # パドルの高さ
-Y_PADDLE = 50  # パドルの下方向からの位置
+Y_PADDLE = 150  # パドルの下方向からの位置
 COLOR_PADDLE = "green"  # パドルの色
 
 RADIUS_BALL = 10  # ボールの半径
-COLOR_BALL = "red"  # ボールの色
-NUM_BALL = 2  # ボールの数
+COLOR_BALL = "aqua"  # ボールの色
+NUM_BALL = 1  # ボールの数
 
 UPDATE_TIME = 20  # 更新間隔（ms）
 
@@ -68,14 +69,15 @@ class Ball:
             self.reflectH()
             self.x = self.x_max
 
-        if self.y < self.y_min:
+        #if self.y < self.y_min:
             # 上の壁とぶつかった
 
             # 縦方向に反射
-            self.reflectV()
-            self.y = self.y_min
+            #self.reflectV()
+            #self.y = self.y_min
 
-        # elif self.y > self.y_max:
+        #elif self.y > self.y_max:
+
             # 下の壁とぶつかった
 
             # 縦方向に反射
@@ -181,7 +183,7 @@ class Ball:
     def exists(self):
         '''画面内に残っているかどうかの確認'''
 
-        return True if self.y <= self.y_max else False
+        return True if self.y >= self.y_min else False
 
 
 class Paddle:
